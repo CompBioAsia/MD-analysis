@@ -21,5 +21,6 @@ rm -f rmsd.cpptraj
 
 # Run cpptraj
 cpptraj -i rmsd.cpptraj
+# add actual commas to the .csv file so the frame number and rmsd are in seperate columns in excel
 sed 's/^ *//; s/ \+/,/g' $ref-rmsd-pre.csv > $ref-rmsd.csv
 rm $ref-rmsd-pre.csv
